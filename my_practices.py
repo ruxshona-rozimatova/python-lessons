@@ -86,36 +86,60 @@ Created on Sun Mar 29 17:33:58 2026
 #         print(f"Kechirasiz, bizda {buyurtma} yo'q.")
 
 #NESTING
-adabiyot = {
-        'ism':'Alisher Navoiy',
-        't_yil':1441,
-        'vaf_yil':1501,
-        'tillar':'fors va arab',
-        'shahar':'Hirot',
-        'faoliyat':'g\'azalshunos, vazirlik'
-        }
+# adabiyot = {
+#         'ism':'Alisher Navoiy',
+#         't_yil':1441,
+#         'vaf_yil':1501,
+#         'tillar':'fors va arab',
+#         'shahar':'Hirot',
+#         'faoliyat':'g\'azalshunos, vazirlik'
+#         }
 
-sanat = {
-        'ism':'Obid Asomov',
-        't_yil':1963,
-        'vaf_yil':2018,
-        'shahar':'Toshkent',
-        'faoliyat':'so\'z ustasi, aktyorlik'
-        }
+# sanat = {
+#         'ism':'Obid Asomov',
+#         't_yil':1963,
+#         'vaf_yil':2018,
+#         'shahar':'Toshkent',
+#         'faoliyat':'so\'z ustasi, aktyorlik'
+#         }
 
-internet = {
-        'ism':'Bill Gates',
-        'shahar':'Washington',
-        't_yil':1955,
-        'kapital': 102.1,
-        'faoliyat':'entrepreneurship'
-        }
-shaxslar = [adabiyot, sanat, internet]
-for shaxs in shaxslar:
-    print(f"{shaxs['ism']} {shaxs['t_yil']}-yilda tug'ilgan.")
-    print(f"{shaxs['shahar']}da tug'ilgan.")
-    print(f"U {shaxs['faoliyat']} sohasida faoliyat olib borgan.\n")
+# internet = {
+#         'ism':'Bill Gates',
+#         'shahar':'Washington',
+#         't_yil':1955,
+#         'kapital': 102.1,
+#         'faoliyat':'entrepreneurship'
+#         }
+# shaxslar = [adabiyot, sanat, internet]
+# for shaxs in shaxslar:
+#     print(f"{shaxs['ism']} {shaxs['t_yil']}-yilda tug'ilgan.")
+#     print(f"{shaxs['shahar']}da tug'ilgan.")
+#     print(f"U {shaxs['faoliyat']} sohasida faoliyat olib borgan.\n")
 
+
+# while sikli
+# savat = []
+# while True:
+#     mahsulot = input("Savatga mahsulot qo'shing: ")
+#     savat.append(mahsulot)
+#     javob = input("Yana mahsulot qo'shishni ishlaysizmi?>(ha/yo'q)> ")
+#     if javob != 'ha':
+#         break
+
+
+buyurtmalar = ['olma','anor','uzum','tarvuz', 'qovun', 'behi']
+mahsulotlar = {'olma':35000,
+               'shaftoli':25000,
+               'tarvuz':18000,
+               'uzum':22000}
+
+while buyurtmalar:
+    buyurtma = buyurtmalar.pop()
+    if buyurtma in mahsulotlar.keys():
+        narh = mahsulotlar[buyurtma]
+        print(f"{buyurtma.title()} - {narh} so'm")
+    else:
+        print(f"Bizda {buyurtma} yo'q")
 
 
 
